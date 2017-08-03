@@ -1,77 +1,90 @@
----
-layout: page
-main_image_path: /assets/header4.jpg
----
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Clare Carswell</title>
+<meta name="description" content="Clare Carswell, UK artist" />
+<meta name="keywords" content="Clare Carswell, british artist, contemporary art, fine art, performance, installation, curation, teaching, oxford" />
+<meta name="author" content="Eye Division" />
+<meta name="Copyright" content="Copyright (c) Clare Carswell" />
+<meta http-equiv="Expires" content="-1" />
+<link rel="stylesheet" type="text/css" media="print" href="css/print.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/basic.css" />
+<style type="text/css" media="screen">
+	<!--
+	@import url("css/main.css");
+	-->
+</style>
+<link rel="stylesheet" href="css/anythingslider.css" />
+<!--[if lt IE 8]>
+<link rel="stylesheet" href="/css/anythingslider-ie.css" type="text/css" media="screen" />
+<![endif]-->
+<script type="text/javascript" src="code/jquery.min.js"></script>
+<script src="code/jquery.anythingslider.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+$(document).ready(function() {
+    $('#slider').anythingSlider({
+        mode: 'f',
+        buildArrows: false,
+        buildNavigation: false,
+        buildStartStop: false,
+        resizeContents: false,
+        startPanel: 1,
+        delay:5000,
+        enableArrows: true,
+        animationTime:800,
+        autoPlay: true
+    });
+});
+/* ]]> */
 
-<ul class="post-list">
-  {% for post in paginator.posts %}
-  <li>
-    <h2>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
-      <div class="post-categories">
-      {% if post.categories.size > 0 %}in {% for cat in post.categories %}
-        {% if site.jekyll-archives %}
-        <a href="{{ site.baseurl }}/category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
-        {% else %}
-        <span>{{ cat | capitalize }}</span>{% if forloop.last == false %}, {% endif %}
-        {% endif %}
-      {% endfor %}{% endif %}
-      </div>
-    </section>
-  </li>
-  {% if forloop.last == false %}
-  <hr>
-  {% endif %}
-  {% endfor %}
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6193112-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<meta name="google-site-verification" content="9jp8zWdwYtNXq7v_F2cdF0JiMl9zftEF0hKTPA2Z9w0" />
+</head>
+
+<body>
+
+<a name="top"></a>
+<div id="container">
+<div id="content">
+<div id="main">
+<div id="hptopnav">	
+	<p><a href="index.html" title="Return home" accesskey="1"><img src="images/logo.gif" alt="Clare Carswell - click to return home" width="500" height="50" border="0" /></a></p>
+	<p align="center"><a href="index.html" title="Return home" accesskey="1">home</a> | 
+				<a href="page.php%3Fp=6.html" title="Read more about Clare Carswell">about</a> | <a href="work.php.html" title="View the work">the work</a> | <a href="page.php%3Fp=1.html" title="The writing">the writing</a> | <a href="page.php%3Fp=2.html" title="curation">curation</a> | <a href="page.php%3Fp=3.html" title="teaching">teaching</a> |  <a href="contact.php.html" title="Send an email">contact</a> | <a href="page.php%3Fp=5.html" title="Web links">links</a></p>
+			</div><ul id="slider">
+	<li><img src="images/slides/Diva_pink.jpg" /></li>
+	<li><img src="images/slides/Prunes_pink.jpg" /></li>
+  <li><img src="images/slides/Siren_pink.jpg" /></li>
+  <li><img src="images/slides/Soup_pink.jpg" /></li>
+  <li><img src="images/slides/Tags_pink.jpg" /></li>
+  <li><img src="images/slides/TurkishDelight.jpg" /></li>
+  <li><img src="images/slides/Umbrella_pink.jpg" /></li>
+  <li><img src="images/slides/Fuel_pink.jpg" /></li>
+  <li><img src="images/slides/Votum.jpg" /></li>
 </ul>
 
-<nav class="pagination" role="navigation">
-  <p>
-    {% if paginator.next_page %}
-    <a class="newer-posts" href="{{ site.baseurl }}/page{{paginator.next_page}}">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-square fa-stack-2x"></i>
-        <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-    {% else %}
-    <span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-    </span>
-    {% endif %}
-    <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.previous_page %}
-      {% if paginator.page == 2 %}
-      <a class="newer-posts" href="{% if site.baseurl %}{{ site.baseurl }}{% endif %}/">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-      {% else %}
-      <a class="newer-posts" href="{{ site.baseurl }}/page{{paginator.previous_page}}">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-      {% endif %}
-    {% else %}
-    <span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-    </span>
-    {% endif %}
-  </p>
-  <p>
-    <a href="{{ site.baseurl }}/posts">View All Posts by Category</a>
-  </p>
-</nav>
 
+
+			<div id="hpcredits">&copy; All work is copyright the artist, no reproduction without permission.<br />Site by <img src="images/ed_logo15x15w.gif" alt="site design by Eye Division" width="15" height="15" /> <a href="http://www.eyedivision.com" title="Site by Eye Division" target="_blank">Eye Division</a>
+			</div>
+		</div> <!-- end main -->
+
+	</div>	<!-- end content -->
+</div>
+
+
+
+</body>
+</html>
