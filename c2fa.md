@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: empty
 title: 
 permalink: /.well-known/cf-2fa-verify.txt
 ---
