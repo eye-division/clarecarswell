@@ -1,5 +1,4 @@
 ---
-layout: empty
 permalink: /.well-known/cf-2fa-verify.txt
 ---
 
